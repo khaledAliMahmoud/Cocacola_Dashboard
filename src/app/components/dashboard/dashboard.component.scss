@@ -1,0 +1,46 @@
+@import "../../../assets/shared/styleVar.scss";
+
+.dashboardPage {
+  width: 100%;
+  height: 100%;
+  padding: 2%;
+  display: flex;
+}
+
+.dashboardLeft {
+  width: 70%;
+  height: 100%;
+  margin-right: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .dashLeftPart1 {
+    width: 100%;
+    height: 30%;
+  }
+
+  .dashLeftPart2 {
+    width: 100%;
+    height: 30%;
+    box-shadow: 0px 8px 12px #0000001a;
+    border-radius: 10px;
+    background-color: $w;
+  }
+
+  .dashLeftPart3 {
+    width: 100%;
+    height: 30%;
+    box-shadow: 0px 8px 12px #0000001a;
+    border-radius: 10px;
+    background-color: $w;
+  }
+}
+
+.dashboardRight {
+  width: 30%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 8px 12px #0000001a;
+  background-color: $w;
+}

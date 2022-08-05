@@ -1,0 +1,88 @@
+@import '../../../assets/shared/styleVar.scss';
+
+.sidebarPage{
+  width: 100%;
+  height: 100%;
+  color: white;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo{
+  width: 100%;
+  padding: 0%;
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .logoText{
+    font-size: 24px;
+    margin: 0%;
+    padding: 0%;
+  }
+
+  .logoImg{
+    width: 35%;
+    height: 35%;
+    margin-right: 0%;
+    margin-left: -20%;
+  }
+
+}
+
+
+.sidebarLinks{
+  width: 100%;
+  height: 100%;
+  padding: 10% 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.sidebarLinksTop{
+  width: 100%;
+}
+
+.link{
+  width: 85%;
+  height: 2rem;
+  text-decoration: none;
+  color: $w;
+  padding: 20px 0%;
+  margin-bottom: 10%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.link:hover{
+  background-color: #00000029;
+  border-radius: 0px 20px 20px 0px;
+}
+
+.link p{
+  width: 40%;
+margin: 0%;
+padding: 0%;
+}
+
+.link img{
+  width: 12%;
+  margin: 0%;
+}
+
+.sidebarLinksDown{
+  width: 100%;
+}
+
+.colaImg{
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+
+}

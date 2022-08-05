@@ -1,0 +1,178 @@
+<div class="activityPage">
+
+  <div class="progress" *ngIf="activeCahrts == 'progress' " (click)="showBtn('chart')">
+
+  <div class="activityHead">
+    <img src="../../../assets/Imgs/Activity.svg" alt="">
+    <p>Time line</p>
+  </div>
+
+  <div class="activityBody">
+
+    <div class="activityNames">
+
+      <div class="names">
+      <div class="name1">
+        <p>LINE NAME</p>
+        <div class="name1Shape"></div>
+      </div>
+
+      <div class="name2">
+        <p>LINE NAME</p>
+        <div class="name2Shape"></div>
+      </div>
+
+      <div class="name3">
+        <p>LINE NAME</p>
+        <div class="name3Shape"></div>
+      </div>
+
+      <div class="name4">
+        <p>LINE NAME</p>
+        <div class="name4Shape"></div>
+      </div>
+      </div>
+    </div>
+
+    <div class="activityPart1">
+
+      <div class="partsHeader">
+        <p>OEE</p>
+        <p>70%</p>
+      </div>
+
+      <div class="part1Contents">
+      <div class="Content1">
+        <div class="part1Shape"></div>
+        <p>60%</p>
+      </div>
+
+      <div class="Content2">
+        <div class="part2Shape"></div>
+        <p>90%</p>
+      </div>
+
+      <div class="Content3">
+        <div class="part3Shape"></div>
+        <p>75%</p>
+      </div>
+
+      <div class="Content4">
+        <div class="part4Shape"></div>
+        <p>68%</p>
+      </div>
+    </div>
+    </div>
+
+    <div class="activityPart1">
+
+      <div class="partsHeader">
+        <p>MTBF[h]</p>
+        <p>55%</p>
+      </div>
+
+      <div class="part1Contents">
+      <div class="Content1">
+        <div class="part1Shape"></div>
+        <p>60%</p>
+      </div>
+
+      <div class="Content2">
+        <div class="part2Shape"></div>
+        <p>90%</p>
+      </div>
+
+      <div class="Content3">
+        <div class="part3Shape"></div>
+        <p>75%</p>
+      </div>
+
+      <div class="Content4">
+        <div class="part4Shape"></div>
+        <p>68%</p>
+      </div>
+    </div>
+    </div>
+
+    <div class="activityPart1">
+
+      <div class="partsHeader">
+        <p>UPTIME</p>
+        <p>55%</p>
+      </div>
+
+      <div class="part1Contents">
+      <div class="Content1">
+        <div class="part1Shape"></div>
+        <p>60%</p>
+      </div>
+
+      <div class="Content2">
+        <div class="part2Shape"></div>
+        <p>90%</p>
+      </div>
+
+      <div class="Content3">
+        <div class="part3Shape"></div>
+        <p>75%</p>
+      </div>
+
+      <div class="Content4">
+        <div class="part4Shape"></div>
+        <p>68%</p>
+      </div>
+    </div>
+    </div>
+
+  </div>
+</div>
+
+
+  <div class="chart" *ngIf="activeCahrts == 'chart' ">
+
+    <div class="activityHead">
+
+      <div class="title">
+      <img src="../../../assets/Imgs/Activity.svg" alt="">
+      <p>Time line</p>
+    </div>
+
+    <div class="links">
+      <p [ngClass]="{activeLink: activeLink == 'OEE'}" (click)="linkBtn('OEE')">OEE</p>
+      <p [ngClass]="{activeLink: activeLink == 'MTBF'}" (click)="linkBtn('MTBF')">MTBF[h]</p>
+      <p [ngClass]="{activeLink: activeLink == 'UPTIME'}" (click)="linkBtn('UPTIME')">UPTIME</p>
+    </div>
+
+    </div>
+
+    <div class="chart-container" *ngIf="activeLink == 'OEE' " (click)="showBtn('progress')">
+      <p-chart
+        type="line"
+        [data]="data1"
+        [height]="150"
+        (onDataSelect)="selectData($event)"
+      ></p-chart>
+    </div>
+
+    <div class="chart-container" *ngIf="activeLink == 'MTBF' " (click)="showBtn('progress')">
+      <p-chart
+        type="line"
+        [data]="data2"
+        [height]="150"
+        (onDataSelect)="selectData($event)"
+      ></p-chart>
+    </div>
+
+    <div class="chart-container" *ngIf="activeLink == 'UPTIME' " (click)="showBtn('progress')">
+      <p-chart
+        type="line"
+        [data]="data3"
+        [height]="150"
+        (onDataSelect)="selectData($event)"
+      ></p-chart>
+    </div>
+
+  </div>
+
+
+</div>

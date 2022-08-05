@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+  margin: 0%;
+  padding: 0%;
+  background-color: #F4F7FE;
+}
+
+.p-button.p-button-icon-only {
+  width: 3rem;
+  height: 2rem !important;
+}
+
+.ng-trigger {
+  z-index: 1001;
+  transform-origin: center bottom;
+  top: 37px !important;
+  left: -380px !important;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}

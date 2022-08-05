@@ -1,0 +1,45 @@
+@import '../assets/shared/styleVar.scss';
+
+.colaDashboard{
+  width: 100vw;
+  height: 100vh;
+  margin: 0%;
+  padding: 0%;
+  display: flex;
+}
+
+.colaSidebar{
+  width: 14%;
+  height: 100%;
+  background-color: red;
+}
+
+.Dashboard{
+  width:86%;
+  height: 100%;
+  margin: 0%;
+
+  .pageContent{
+    width: 100%;
+    height: 94%;
+    margin: 0%;
+    background-color: #F4F7FE;
+  }
+
+}
+
+.Dashboard .navbar{
+  height: 6%;
+  box-sizing: border-box;
+  padding: 0%;
+  background-color: $w;
+
+   app-navbar{
+    width: 100%;
+    height: 100%;
+
+  }
+
+}
+
+

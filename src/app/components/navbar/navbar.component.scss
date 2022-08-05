@@ -1,0 +1,91 @@
+@import '../../../assets/shared/styleVar.scss';
+
+.navbarPage{
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  // background-color: aquamarine;
+}
+
+.navLeftEle{
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+
+  .dropdown img{
+    margin-bottom: 1%;
+  }
+
+  .planetBtn{
+    height: 100%;
+    background-color: $BtnColor
+  }
+
+  .navline{
+    // height: 35px;
+    width: 40px;
+    height: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: $BtnColor;
+
+    img{
+      height: 60%;
+      width: 100%;
+      margin-top: 15%;
+    }
+
+  }
+
+  .navMachines{
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+  }
+
+}
+
+.navMidEle{
+  width: 30%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+   a{
+    text-decoration: none;
+    color: $muted;
+    border-radius: 8px;
+    }
+
+    .activeBtn{
+    color: $w !important;
+    border-radius: 8px;
+    padding: 1% 2%;
+    background-color: $BtnColor;
+    }
+
+
+
+}
+
+.navDateEle{
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  
+  .calendar{
+    width: 15%;
+    height: 100%;
+    margin-top: 1%;
+    margin-right: 10%;
+  }
+
+}

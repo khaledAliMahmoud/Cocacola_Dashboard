@@ -1,0 +1,79 @@
+@import '../../../assets/shared/styleVar.scss';
+
+.loginPage{
+  height: 100%;
+  display: flex;
+}
+
+.loginLeft{
+  width: 70%;
+  height: 100%;
+  padding: 0%;
+  margin: 0%;
+  display: flex;
+  align-items: center;
+  background-color: red;
+
+   img{
+    width: 90%;
+    height: 90%;
+  }
+
+}
+
+.loginRight{
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: $w;
+
+  .loginHead{
+    color: red;
+    font-size: 36px;
+    font-weight: bold;
+    display: flex;
+  }
+
+  .loginHead p{
+    margin-bottom: 0%;
+    margin-left: 5%;
+  }
+
+  .loginInp{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .loginInp input{
+    width: 70%;
+    padding: 12px 8px;
+    border-radius: 35px;
+    border: 1px solid #B2BEC3;
+  }
+
+  .loginInp input:focus{
+    outline: none !important;
+    border: 1px solid red ;
+  }
+
+  .loginBtn{
+    width: 70%;
+    color: $w;
+    font-weight: bold;
+    padding: 12px 8px;
+    border-radius: 35px;
+    margin: 4% 0%;
+    cursor: pointer;
+    border: none;
+    background-color: red;
+  }
+
+}
+

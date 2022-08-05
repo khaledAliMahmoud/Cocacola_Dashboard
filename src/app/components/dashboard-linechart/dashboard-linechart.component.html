@@ -1,0 +1,37 @@
+<div class="lineChartPage">
+  <div class="lineChart" *ngFor="let line of lines">
+    <div class="lineHeader">
+      <i class="fa-solid fa-circle circle1"></i>
+      <p>CYCLE TIME</p>
+      <span>[seconds]</span>
+    </div>
+
+    <div id="chart-container">
+      <p-chart
+        type="line"
+        [data]="data"
+        [height]="150"
+        (onDataSelect)="selectData($event)"
+      ></p-chart>
+    </div>
+
+    <div class="lineDesc">
+      <div class="desc1">
+        <span>Avg.</span>
+        <p>1.0</p>
+      </div>
+
+      <div class="desc1">
+        <i class="fa-solid fa-chevron-down arrow"></i>
+        <span>Min.</span>
+        <p>0.5</p>
+      </div>
+
+      <div class="desc1">
+        <i class="fa-solid fa-angle-up arrow"></i>
+        <span>Max.</span>
+        <p>2.0</p>
+      </div>
+    </div>
+  </div>
+</div>

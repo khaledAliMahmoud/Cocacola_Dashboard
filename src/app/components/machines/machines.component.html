@@ -1,0 +1,26 @@
+<div class="machinPage">
+
+<div class="production">
+
+  <div class="productionTitle">
+    <p>Dashboard / Production</p>
+  </div>
+
+  <div class="productionBtn">
+    <p (click)="activeBtn('SKU')" [ngClass]="{ 'BtnActive' : productionBtn == 'SKU'}">SKU</p>
+    <p (click)="activeBtn('Production')" [ngClass]="{ 'BtnActive' : productionBtn == 'Production'}" >Production</p>
+  </div>
+
+
+</div>
+
+<div class="factories">
+
+  <div class="factory" *ngFor="let factory of factories" >
+    <app-factory></app-factory>
+  </div>
+
+</div>
+
+
+</div>

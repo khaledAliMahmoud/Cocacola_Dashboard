@@ -1,0 +1,64 @@
+<div class="navbarPage">
+  <div class="navLeftEle">
+    <div class="dropdown">
+      <button
+        class="btn planetBtn text-white dropdown-toggle"
+        type="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <img src="../../../assets/Imgs/planet.svg" alt="" /> Dropdown button
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">planet1</a></li>
+        <li><a class="dropdown-item" href="#">planet2</a></li>
+        <li><a class="dropdown-item" href="#">planet3</a></li>
+      </ul>
+    </div>
+
+    <div class="navline">
+      <img src="../../../assets/Imgs/line.svg" alt="" />
+    </div>
+
+    <div class="navMachines">
+      <img src="../../../assets/Imgs/machines.svg" alt="" />
+    </div>
+  </div>
+
+  <div class="navMidEle">
+    <a
+      href="#"
+      [ngClass]="{ activeBtn: timeBtn === 'Today' }"
+      (click)="timeActive('Today')"
+      >Today</a
+    >
+    <a
+      href="#"
+      [ngClass]="{ activeBtn: timeBtn === 'Yesterday' }"
+      (click)="timeActive('Yesterday')"
+      >Yesterday</a
+    >
+    <a
+      href="#"
+      [ngClass]="{ activeBtn: timeBtn === 'LastWeek' }"
+      (click)="timeActive('LastWeek')"
+      >Last Week</a
+    >
+  </div>
+
+  <div class="navDateEle">
+    
+    <div class="calendar">
+      <p-calendar
+        [(ngModel)]="date3"
+        [showIcon]="true"
+        inputId="icon"
+        placeholder="Date"
+        [inputStyle]="{
+          display: 'none'
+        }"
+      ></p-calendar>
+    </div>
+  </div>
+
+</div>
