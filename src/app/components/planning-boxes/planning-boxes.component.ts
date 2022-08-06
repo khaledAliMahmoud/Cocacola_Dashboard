@@ -29,6 +29,8 @@ export class PlanningBoxesComponent implements OnInit {
         };
 }
 
+
+
   ngOnInit(): void {
   }
 

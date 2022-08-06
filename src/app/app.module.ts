@@ -23,6 +23,8 @@ import { PlanningComponent } from './components/planning/planning.component';
 import { ReportsComponent } from './components/reports/reports.component';
 import { FactoryComponent } from './components/factory/factory.component';
 import { PlanningBoxesComponent } from './components/planning-boxes/planning-boxes.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
+import { PlanningTreeComponent } from './components/planning-tree/planning-tree.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,8 @@ import { PlanningBoxesComponent } from './components/planning-boxes/planning-box
     PlanningComponent,
     ReportsComponent,
     FactoryComponent,
-    PlanningBoxesComponent
+    PlanningBoxesComponent,
+    PlanningTreeComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +52,18 @@ import { PlanningBoxesComponent } from './components/planning-boxes/planning-box
     CalendarModule,
     ChartModule,
     BrowserAnimationsModule,
-    NgChartsModule
+    NgChartsModule,
+    NgCircleProgressModule,
+    NgCircleProgressModule.forRoot({
+      
+      radius: 100,
+      outerStrokeWidth: 16,
+      innerStrokeWidth: 8,
+      outerStrokeColor: "#78C000",
+      innerStrokeColor: "#C7E596",
+      animationDuration: 300,
+
+    })
   ],
   providers: [MessageService, ConfirmationService],
   bootstrap: [AppComponent]

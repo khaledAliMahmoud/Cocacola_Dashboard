@@ -61,6 +61,13 @@
 
 }
 
+.chart2{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .box2 {
   width: 45%;
   height: 100%;
@@ -83,52 +90,38 @@
   }
 
   .box2Body{
+    height: 75%;
     padding: 5px;
     display: flex;
     justify-content: space-between;
 
     .box2Chart{
-      width: 30%;
+      width: 60%;
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
     }
 
     .box2Progress{
-      width: 60%;
+      width: 35%;
+      height: 100%;
       display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
 
-      .lineProgress1{
-        width: 60%;
-        height: 8px;
-        position: relative;
-        border-radius:5px ;
-        background-color: #B2BEC39C;
-      }
-
-      .lineProgress1::before{
-        content: '';
-        width: 70%;
-        height: 100%;
-        top: 0%;
-        left: 0%;
-        position: absolute;
-        border-radius: 5px 0px 0px 5px;
-        background-color: #FF5400;
-      }
-
-      .lineProgress1::after{
-        content: 'Production Yield';
-        top: 0.6rem;
-        left: 0%;
-        position: absolute;
-        color: #2C3E50;
-        font-size: 10px;
+      .planProgress{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 8%;
       }
 
       .lineProgress2{
         width: 60%;
         height: 8px;
+        margin-bottom: 0%;
         position: relative;
         border-radius:5px ;
         background-color: #B2BEC39C;
@@ -142,7 +135,7 @@
         left: 0%;
         position: absolute;
         border-radius: 5px 0px 0px 5px;
-        background-color: #FF9F1C;
+        background-color:#2C3E50;
       }
 
       .lineProgress2::after{
@@ -157,6 +150,7 @@
       .lineProgress3{
         width: 60%;
         height: 8px;
+        margin-top: 0%;
         position: relative;
         border-radius:5px ;
         background-color: #B2BEC39C;
@@ -170,7 +164,7 @@
         left: 0%;
         position: absolute;
         border-radius: 5px 0px 0px 5px;
-        background-color: #FF5400;
+        background-color: #2C3E50;
       }
 
       .lineProgress3::after{

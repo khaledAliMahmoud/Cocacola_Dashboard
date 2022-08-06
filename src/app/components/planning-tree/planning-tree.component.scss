@@ -1,0 +1,342 @@
+@import "../../../assets/shared/styleVar.scss";
+
+.treePage {
+  width: 100%;
+  height: 100%;
+
+
+
+    .treeHead {
+      height: 19%;
+      width: 100%;
+      padding-top: 1%;
+      margin-bottom: 0%;
+      padding-left: 3%;
+      border-bottom: 1px solid lightgray;
+
+      p {
+        display: inline-block;
+        margin-left: 1%;
+        color: #000000;
+      }
+    }
+
+    .treeBody{
+      width: 100%;
+      height: 80%;
+      padding: 0%;
+      display: flex;
+      justify-content: space-around;
+
+      .line{
+        height: 100%;
+        width: 10%;
+        margin-right: 1%;
+        position: relative;
+        // background-color: bisque;
+
+        .lineShape1{
+          width: 27.73px;
+          height: 25%;
+          border-radius: 4px;
+          margin: 8% auto;
+          background-color: red;
+        }
+
+        .lineShape2{
+          width: 27.73px;
+          height: 65%;
+          border-radius: 4px;
+          margin: 0% auto;
+          background-color: aqua;
+        }
+
+        p{
+          margin: 0%;
+        }
+
+        .OFF{
+          position: absolute;
+          top: 10%;
+          left: 1%;
+          transform: rotate(-90deg);
+        }
+
+        .ON{
+          position: absolute;
+          bottom: 10%;
+          left: 1%;
+          transform: rotate(-90deg);
+        }
+
+        .offValue{
+          position: absolute;
+          top: 3%;
+          right: 4%;
+          font-size: 12px;
+          font-weight: bold;
+        }
+
+        .onValue{
+          position: absolute;
+          top: 31%;
+          right: 4%;
+          font-size: 12px;
+          font-weight: bold;
+        }
+
+        .shape2{
+          width: 27.73px;
+          height: 70%;
+          margin: 0% auto;
+          margin-top: 25%;
+          border-radius: 4px;
+          position: relative;
+          background-color: rgba(183, 255, 255, 0.863);
+        }
+
+        .shape2::before{
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 65%;
+          bottom: 0%;
+          left: 0%;
+          border-radius: 4px;
+          background-color: aqua;
+        }
+
+        .shape2Name{
+          text-align: center;
+          font-size: 14px;
+          font-weight: bold;
+        }
+
+        .shape2VAlue{
+          position: absolute;
+          top: 32%;
+          right: 1%;
+          font-size: 12px;
+          font-weight: bold;
+        }
+
+        .shape3{
+          width: 27.73px;
+          height: 70%;
+          margin: 0% auto;
+          margin-top: 25%;
+          border-radius: 4px;
+          position: relative;
+          background-color: rgba(183, 255, 255, 0.863);
+        }
+
+        .shape3::before{
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 30%;
+          top: 0%;
+          left: 0%;
+          border-radius: 4px;
+          background-color: aqua;
+        }
+
+        .shape3Name{
+          text-align: center;
+          font-size: 14px;
+          font-weight: bold;
+        }
+
+        .shape3VAlue{
+          position: absolute;
+          top: 10%;
+          right: 1%;
+          font-size: 12px;
+          font-weight: bold;
+        }
+
+        .shape4{
+          width: 27.73px;
+          height: 35%;
+          margin: 0% auto;
+          border-radius: 4px;
+          position: relative;
+          background-color: rgba(255, 191, 191, 0.829);
+        }
+
+        .shape4::before{
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 40%;
+          top: 0%;
+          left: 0%;
+          border-radius: 4px;
+          background-color: red;
+        }
+
+        .shape4Name{
+          text-align: center;
+          font-size: 14px;
+          font-weight: bolder;
+          margin-top: 10%;
+          margin-bottom: 4%;
+        }
+
+        .shape4VAlue{
+          position: absolute;
+          top: 25%;
+          right: 10%;
+          font-size: 12px;
+          font-weight: bold;
+        }
+
+        .shape5{
+          width: 27.73px;
+          height: 35%;
+          margin: 0% auto;
+          border-radius: 4px;
+          position: relative;
+          background-color: rgba(255, 191, 191, 0.829);
+        }
+
+        .shape5::before{
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 10%;
+          top: 40%;
+          left: 0%;
+          border-radius: 4px;
+          background-color: red;
+        }
+
+        .shape5Name{
+          text-align: center;
+          font-size: 14px;
+          font-weight: bolder;
+          margin-top: 10%;
+          margin-bottom: 4%;
+        }
+
+        .shape5VAlue{
+          position: absolute;
+          top: 36%;
+          right: 10%;
+          font-size: 12px;
+          font-weight: bold;
+        }
+
+        .shape6{
+          width: 27.73px;
+          height: 35%;
+          margin: 0% auto;
+          border-radius: 4px;
+          position: relative;
+          background-color: rgba(255, 191, 191, 0.829);
+        }
+
+        .shape6::before{
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 15%;
+          top: 40%;
+          left: 0%;
+          border-radius: 4px;
+          background-color: red;
+        }
+
+        .shape6Name{
+          text-align: center;
+          font-size: 14px;
+          font-weight: bolder;
+          margin-top: 10%;
+          margin-bottom: 4%;
+        }
+
+        .shape6VAlue{
+          position: absolute;
+          top: 37%;
+          right: 10%;
+          font-size: 12px;
+          font-weight: bold;
+        }
+
+        .shape7{
+          width: 27.73px;
+          height: 35%;
+          margin: 0% auto;
+          border-radius: 4px;
+          position: relative;
+          background-color: rgba(255, 191, 191, 0.829);
+        }
+
+        .shape7::before{
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 15%;
+          top: 45%;
+          left: 0%;
+          border-radius: 4px;
+          background-color: red;
+        }
+
+        .shape7Name{
+          text-align: center;
+          font-size: 14px;
+          font-weight: bolder;
+          margin-top: 10%;
+          margin-bottom: 4%;
+        }
+
+        .shape7VAlue{
+          position: absolute;
+          top: 30%;
+          right: 10%;
+          font-size: 12px;
+          font-weight: bold;
+        }
+
+        .shape8{
+          width: 27.73px;
+          height: 35%;
+          margin: 0% auto;
+          border-radius: 4px;
+          position: relative;
+          background-color: rgba(255, 191, 191, 0.829);
+        }
+
+        .shape8::before{
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 20%;
+          top: 45%;
+          left: 0%;
+          border-radius: 4px;
+          background-color: red;
+        }
+
+        .shape8Name{
+          text-align: center;
+          font-size: 14px;
+          font-weight: bolder;
+          margin-top: 10%;
+          margin-bottom: 4%;
+        }
+
+        .shape8VAlue{
+          position: absolute;
+          top: 30%;
+          right: 10%;
+          font-size: 12px;
+          font-weight: bold;
+        }
+
+      }
+
+    }
+
+}
