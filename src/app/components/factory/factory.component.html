@@ -65,17 +65,48 @@
 
     <div class="factoryCharts">
       <div class="factoryChart">
-        <p-chart type="pie" [data]="data" [height]="60" [width]="60" ></p-chart>
+        <circle-progress
+          [percent]="76"
+          [radius]="30"
+          [showSubtitle]="false"
+          [outerStrokeWidth]="5"
+          [innerStrokeWidth]="0"
+          [outerStrokeColor]="'#FF9F1C'"
+          [innerStrokeColor]="'#B2BEC39C'"
+          [animation]="true"
+          [animationDuration]="300"
+        >
+      </circle-progress>
         <p>OEE</p>
       </div>
 
       <div class="factoryChart">
-        <p-chart type="pie" [data]="data" [height]="60" [width]="60" ></p-chart>
+        <circle-progress
+        [percent]="76"
+        [radius]="30"
+        [showSubtitle]="false"
+        [outerStrokeWidth]="5"
+        [innerStrokeWidth]="0"
+        [outerStrokeColor]="'#00D1DE'"
+        [innerStrokeColor]="'#B2BEC39C'"
+        [animation]="true"
+        [animationDuration]="300"
+        ></circle-progress>
         <p>SLE</p>
       </div>
 
       <div class="factoryChart">
-        <p-chart type="pie" [data]="data" [height]="60" [width]="60" ></p-chart>
+        <circle-progress
+      [percent]="76"
+      [radius]="30"
+      [showSubtitle]="false"
+      [outerStrokeWidth]="5"
+      [innerStrokeWidth]="0"
+      [outerStrokeColor]="'#CA4E82'"
+      [innerStrokeColor]="'#B2BEC39C'"
+      [animation]="true"
+      [animationDuration]="300"
+       ></circle-progress>
         <p>USLE</p>
       </div>
 

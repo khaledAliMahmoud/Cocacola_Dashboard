@@ -1,0 +1,34 @@
+<div class="planning_steps_page">
+
+  <div class="operation_title">
+    <p>Operation</p>
+  </div>
+
+  <div class="operation_steps">
+
+<button [ngClass]="{'activated': operationActivated == 'function' , 'Non_Function_activated': operationActivated !== 'function' }" (click)="OperationBtn('function')">
+    <img src="../../../assets/Imgs/planning2/function.svg" alt=""></button>
+  <div class="operationLine"></div>
+
+<button [ngClass]="{'activated': operationActivated == 'time' , 'Non_activated': operationActivated !== 'time'
+ , 'Non_Function_activated': machine_clicked === false }" (click)="[OperationBtn('time') , TimeBtn()]">
+    <img src="../../../assets/Imgs/planning2/time.svg" alt=""></button>
+
+  <div class="operationLine"></div>
+
+<button [disabled]="time_clicked"
+[ngClass]="{'activated': operationActivated == 'machine' , 'Non_activated': operationActivated !== 'machine'
+, 'Non_Function_activated': resource_clicked === false}" (click)="[OperationBtn('machine') , machineBtn()]">
+    <img src="../../../assets/Imgs/planning2/machine.svg" alt=""></button>
+
+  <div class="operationLine"></div>
+
+<button [disabled]="machine_clicked"
+[ngClass]="{'Non_Function_activated': operationActivated == 'Resources' , 'Non_activated': operationActivated !== 'Resources'
+  }" (click)="[OperationBtn('Resources') , resourceBtn()]">
+    <img src="../../../assets/Imgs/planning2/Resources.svg" alt=""></button>
+
+
+  </div>
+
+</div>

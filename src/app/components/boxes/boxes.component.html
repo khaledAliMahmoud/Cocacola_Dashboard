@@ -41,7 +41,18 @@
   <div class="box2Body">
 
     <div class="box2Chart">
-      <p-chart type="pie" [data]="data" [height]="100"></p-chart>
+      <circle-progress
+      [percent]="76"
+      [radius]="30"
+      [showSubtitle]="false"
+      [outerStrokeWidth]="5"
+      [innerStrokeWidth]="0"
+      [outerStrokeColor]="'#08415C'"
+      [innerStrokeColor]="'#B2BEC39C'"
+      [animation]="true"
+      [animationDuration]="300"
+       ></circle-progress>
+       <p>OEE</p>
     </div>
 
     <div class="box2Progress">

@@ -27,19 +27,16 @@
 
   <div class="navMidEle">
     <a
-      href="#"
       [ngClass]="{ activeBtn: timeBtn === 'Today' }"
       (click)="timeActive('Today')"
       >Today</a
     >
     <a
-      href="#"
       [ngClass]="{ activeBtn: timeBtn === 'Yesterday' }"
       (click)="timeActive('Yesterday')"
       >Yesterday</a
     >
     <a
-      href="#"
       [ngClass]="{ activeBtn: timeBtn === 'LastWeek' }"
       (click)="timeActive('LastWeek')"
       >Last Week</a
@@ -47,7 +44,7 @@
   </div>
 
   <div class="navDateEle">
-    
+
     <div class="calendar">
       <p-calendar
         [(ngModel)]="date3"

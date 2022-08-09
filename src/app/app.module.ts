@@ -25,6 +25,7 @@ import { FactoryComponent } from './components/factory/factory.component';
 import { PlanningBoxesComponent } from './components/planning-boxes/planning-boxes.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { PlanningTreeComponent } from './components/planning-tree/planning-tree.component';
+import { PlanningStepsComponent } from './components/planning/planning-steps/planning-steps.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { PlanningTreeComponent } from './components/planning-tree/planning-tree.
     ReportsComponent,
     FactoryComponent,
     PlanningBoxesComponent,
-    PlanningTreeComponent
+    PlanningTreeComponent,
+    PlanningStepsComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +57,7 @@ import { PlanningTreeComponent } from './components/planning-tree/planning-tree.
     NgChartsModule,
     NgCircleProgressModule,
     NgCircleProgressModule.forRoot({
-      
+
       radius: 100,
       outerStrokeWidth: 16,
       innerStrokeWidth: 8,

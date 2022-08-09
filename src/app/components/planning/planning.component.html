@@ -1,26 +1,181 @@
 <div class="planningPage">
 
-  <div class="planningLeft">
+ <div class="route">
 
-    <div class="planningBoxes">
-      <app-planning-boxes></app-planning-boxes>
+  <h2>ROUTE</h2>
+
+  <div class="routeRaod">
+
+    <div [ngClass]="{'activeRouteNum': RouteNum == 'first' , 'second': RouteNum == 'second'}" (click)="RouteNumBtn('first')" >1</div>
+    <div class="routeline"></div>
+    <div [ngClass]="{'activeRouteNum': RouteNum == 'second' , 'second': RouteNum == 'first'}" (click)="RouteNumBtn('second')" >2</div>
+    <div class="routeDotes"></div>
+    <div class="operation">
+      <i class="fa-solid fa-plus"></i>
+      <p>Add Operation</p>
     </div>
 
-    <div class="planningLeft2">
-      <app-planning-tree></app-planning-tree>
-    </div>
+</div>
 
-    <div class="planningLeft3">
-      <app-time-line></app-time-line>
+ </div>
+
+ <div class="planningContent">
+
+  <div class="operations">
+
+    <app-planning-steps></app-planning-steps>
+
+  </div>
+
+  <div class="operation_Content">
+
+    <div class="operationFunction" *ngIf="operationActivated == 'function' " >
+
+    <input type="text" class="searchFunction" placeholder="search Function">
+
+    <div class="functions">
+
+      <div class="functionhead">
+        <p>Function</p>
+        <i class="fa-solid fa-angle-down"></i>
+      </div>
+
+      <div class="function_Body">
+
+        <p *ngFor="let function of allFunctions">Function Name</p>
+
+      </div>
+
     </div>
 
   </div>
 
-<div class="planningRight">
+  <div class="operationTime" *ngIf="operationActivated == 'time' " >
+    <input type="date" class="theDate" placeholder="Date">
+    <input type="time" class="theTime" placeholder="Time">
+  </div>
 
-  <app-dashboard-linechart></app-dashboard-linechart>
+  <div class="operationMachine" *ngIf="operationActivated == 'machine' " >
+
+    <div class="machine_box" *ngFor="let box of MachineBoxs" >
+
+      <div class="machine_id">
+
+        <div class="machine_Dot">
+        <i class="fa-solid fa-circle"></i>
+        <p>Machine ID</p>
+      </div>
+
+      <div class="persentag">
+        <p>OEE</p>
+        <p>78%</p>
+      </div>
+
+
+      </div>
+
+      <div class="machine_name">
+        <img src="../../../assets/Imgs/planning2/machine.svg" alt="">
+        <p>Machine Name</p>
+      </div>
+
+      <div class="planning_charts">
+
+      <div class="Avalability">
+        <circle-progress
+          [percent]="76"
+          [radius]="30"
+          [showSubtitle]="false"
+          [outerStrokeWidth]="5"
+          [innerStrokeWidth]="0"
+          [outerStrokeColor]="'#00D1DE'"
+          [innerStrokeColor]="'#B2BEC39C'"
+          [animation]="true"
+          [animationDuration]="300"
+        >
+      </circle-progress>
+      <p>Avalability</p>
+      </div>
+
+      <div class="Preformance">
+        <circle-progress
+          [percent]="76"
+          [radius]="30"
+          [showSubtitle]="false"
+          [outerStrokeWidth]="5"
+          [innerStrokeWidth]="0"
+          [outerStrokeColor]="'#00D1DE'"
+          [innerStrokeColor]="'#B2BEC39C'"
+          [animation]="true"
+          [animationDuration]="300"
+        >
+      </circle-progress>
+      <p>Preformance</p>
+      </div>
+
+      <div class="Quality">
+        <circle-progress
+          [percent]="26"
+          [radius]="30"
+          [showSubtitle]="false"
+          [outerStrokeWidth]="5"
+          [innerStrokeWidth]="0"
+          [outerStrokeColor]="'#EC5967'"
+          [innerStrokeColor]="'#B2BEC39C'"
+          [animation]="true"
+          [animationDuration]="300"
+        >
+      </circle-progress>
+      <p>Quality</p>
+      </div>
+
+    </div>
+
+    </div>
+
+  </div>
+
+  <div class="operationResources" *ngIf="operationActivated == 'Resources' " >
+
+    <div class="add_Material">
+      <div class="Material" (click)="addMaterial()">
+        <i class="fa-solid fa-leaf"></i> <p>ADD Material</p>
+      </div>
+    </div>
+
+    <div class="ResourcesInputs" *ngFor="let input of ResourcesInputs">
+
+      <div class="allCategories">
+
+        <p class="categories" (click)="MaterialBtn()" >Resources / Materials <i class="fa-solid fa-angle-down"></i> </p>
+
+        <div class="categoriesList" *ngIf="showMaterial === true">
+          <p (click)="ListBtn()">All categories</p>
+          <p (click)="ListBtn()">Recent</p>
+          <p (click)="ListBtn()">Popular</p>
+        </div>
+
+      </div>
+
+      <div class="allCategories">
+
+        <p class="categories" (click)="QuantityBtn()" >Quantity </p>
+        <p class="categories" (click)="QuantityBtn()" >| Unit <i class="fa-solid fa-angle-down"></i></p>
+
+        <div class="categoriesList" *ngIf="showQuantity === true">
+          <p (click)="ListBtn()">All categories</p>
+          <p (click)="ListBtn()">Recent</p>
+          <p (click)="ListBtn()">Popular</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
 
 </div>
 
+ </div>
 
 </div>

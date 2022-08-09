@@ -1,0 +1,65 @@
+@import "../../../../assets/shared/styleVar.scss";
+
+.planning_steps_page{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .operation_title{
+    padding: 0%;
+    margin: 0%;
+
+    p{
+      font-weight: bold;
+      font-size: 20px;
+      margin: 0%;
+      color: #4C788D;
+      transform: rotate(-90deg);
+
+    }
+
+  }
+
+.operation_steps{
+  height: 100%;
+  margin-right: 25%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+
+  .operationLine{
+    width: 3px;
+    height: 100px;
+    background-color: #4C788DCC;
+  }
+
+}
+
+  .Non_activated{
+    padding: 6px;
+    border-radius: 50%;
+    background-color: $w;
+    border: none;
+    cursor: pointer;
+  }
+
+  .Non_Function_activated{
+    padding: 6px;
+    border-radius: 50%;
+    background-color: #2E4A79;
+    border: none;
+    cursor: pointer;
+  }
+
+  .activated{
+    padding: 6px;
+    border-radius: 50%;
+    background-color: #2D62ED;
+    border: none;
+    cursor: pointer;
+  }
+
+}
