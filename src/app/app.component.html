@@ -1,10 +1,13 @@
-<div class="colaDashboard">
+<div class="colaDashboard" *ngIf="logOut == false " >
+
+  <div class="loggedIn">
 
 <div class="colaSidebar">
 <app-sidebar></app-sidebar>
 </div>
 
 <div class="Dashboard">
+
   <div class="navbar">
     <app-navbar></app-navbar>
   </div>
@@ -12,15 +15,13 @@
 <div class="pageContent">
   <router-outlet></router-outlet>
 </div>
+
 </div>
 
+</div>
 
+</div>
 
-
-
-
-
-
-
-
+<div class="loggedOut" *ngIf="logOut == true ">
+  <app-login></app-login>
 </div>

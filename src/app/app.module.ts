@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CalendarModule } from 'primeng/calendar';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { NgChartsModule } from 'ng2-charts';
 
 import { MessageService, ConfirmationService } from 'primeng/api';
@@ -26,6 +26,7 @@ import { PlanningBoxesComponent } from './components/planning-boxes/planning-box
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { PlanningTreeComponent } from './components/planning-tree/planning-tree.component';
 import { PlanningStepsComponent } from './components/planning/planning-steps/planning-steps.component';
+
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { PlanningStepsComponent } from './components/planning/planning-steps/pla
     BrowserAnimationsModule,
     NgChartsModule,
     NgCircleProgressModule,
+    ReactiveFormsModule,
     NgCircleProgressModule.forRoot({
 
       radius: 100,

@@ -16,6 +16,9 @@ export class ActivityComponent implements OnInit {
   data2: any;
   data3: any;
 
+  test:number = 60 ;
+  frame:any;
+
   constructor(private messageService: MessageService) { }
 
   ngOnInit(): void {
@@ -60,6 +63,8 @@ this.data3 = {
 
   ]
 };
+
+  this.frame = `width: ${this.test}% `
 
   }
 

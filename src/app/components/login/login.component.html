@@ -14,9 +14,11 @@
   </div>
 
   <div class="loginInp">
-    <input type="text" placeholder="Email">
-    <input type="password" placeholder="Password">
-    <button class="loginBtn">LOGIN</button>
+    <form [formGroup]="loginForm" (ngSubmit)="loginBtn(loginForm)">
+    <input type="text" formControlName="userMail" placeholder="Email">
+    <input type="password" formControlName="password" placeholder="Password">
+    <button class="loginBtn" type="submit"> LOGIN </button>
+  </form>
     <img src="../../../assets/Imgs/Coca-Cola-Logo.svg" alt="">
   </div>
 
