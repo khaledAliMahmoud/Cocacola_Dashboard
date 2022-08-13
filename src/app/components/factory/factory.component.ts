@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OperationsService } from 'src/app/operations.service';
 
 
 @Component({
@@ -13,7 +14,7 @@ export class FactoryComponent  {
   factories:any []
 
 
-  constructor(){
+  constructor(private _OperationsService:OperationsService){
     this.data = {
       labels: [],
       datasets: [
@@ -31,8 +32,12 @@ export class FactoryComponent  {
               ]
           }]
       };
-  }
 
+      this.factories = this._OperationsService.all_factories;
+      console.log(this.factories);
+
+
+  }
 
 }
 

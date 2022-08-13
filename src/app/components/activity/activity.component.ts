@@ -16,8 +16,34 @@ export class ActivityComponent implements OnInit {
   data2: any;
   data3: any;
 
-  test:number = 60 ;
-  frame:any;
+  activities:any [] = [
+    {
+      title:'oee',
+      title_value: '70%',
+      shape1_value:'60%',
+      shape2_value:'76%',
+      shape3_value:'95%',
+      shape4_value:'45%',
+    }
+    ,
+    {
+      title:'MTBF[h]',
+      title_value: '55%',
+      shape1_value:'45%',
+      shape2_value:'68%',
+      shape3_value:'40%',
+      shape4_value:'73%',
+    }
+    ,
+    {
+      title:'UPTIME',
+      title_value: '92%',
+      shape1_value:'30%',
+      shape2_value:'63%',
+      shape3_value:'23%',
+      shape4_value:'38%',
+    }
+  ];
 
   constructor(private messageService: MessageService) { }
 
@@ -63,8 +89,6 @@ this.data3 = {
 
   ]
 };
-
-  this.frame = `width: ${this.test}% `
 
   }
 

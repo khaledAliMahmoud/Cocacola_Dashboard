@@ -1,7 +1,9 @@
 <div class="factoryPage">
 
+  <div class="factory" *ngFor="let factory of factories">
+
   <div class="factoryName">
-    <p>Factory Name</p>
+    <p>{{factory.name}}</p>
   </div>
 
   <div class="factoryBody">
@@ -15,7 +17,7 @@
         </div>
 
         <div class="value">
-          <p>5,000 <span> L/s </span> </p>
+          <p>{{factory.speed}}<span> L/s </span> </p>
         </div>
 
       </div>
@@ -27,7 +29,7 @@
         </div>
 
         <div class="value">
-          <p>20,000 <span> L </span> </p>
+          <p>{{factory.production}} <span> L </span> </p>
         </div>
 
       </div>
@@ -39,7 +41,7 @@
         </div>
 
         <div class="value">
-          <p>20  <span> s </span> </p>
+          <p>{{factory.time}}  <span> s </span> </p>
         </div>
 
       </div>
@@ -66,7 +68,7 @@
     <div class="factoryCharts">
       <div class="factoryChart">
         <circle-progress
-          [percent]="a7a"
+          [percent]="factory.oee"
           [radius]="30"
           [showSubtitle]="false"
           [outerStrokeWidth]="5"
@@ -82,7 +84,7 @@
 
       <div class="factoryChart">
         <circle-progress
-        [percent]="76"
+        [percent]="factory.sle"
         [radius]="30"
         [showSubtitle]="false"
         [outerStrokeWidth]="5"
@@ -97,7 +99,7 @@
 
       <div class="factoryChart">
         <circle-progress
-      [percent]="76"
+      [percent]="factory.usle"
       [radius]="30"
       [showSubtitle]="false"
       [outerStrokeWidth]="5"
@@ -121,7 +123,7 @@
         </div>
 
         <div class="value">
-          <p>500  <span> L </span> </p>
+          <p>{{factory.volume}}<span> L </span> </p>
         </div>
 
       </div>
@@ -133,7 +135,7 @@
         </div>
 
         <div class="value">
-          <p>5000</p>
+          <p>{{factory.quality}}</p>
         </div>
 
       </div>
@@ -144,3 +146,4 @@
 
 </div>
 
+</div>

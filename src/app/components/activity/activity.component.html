@@ -34,92 +34,32 @@
       </div>
     </div>
 
-    <div class="activityPart1">
+    <div class="activityPart1" *ngFor="let activity of activities">
 
       <div class="partsHeader">
-        <p>OEE</p>
-        <p>70%</p>
+        <p>{{activity.title}}</p>
+        <p>{{activity.title_value}}</p>
       </div>
 
       <div class="part1Contents">
       <div class="Content1">
-        <div class="part1Shape" [style]="frame"></div>
-        <p>{{test}}%</p>
+        <div class="part1Shape" [ngStyle]="{'width': activity.shape1_value}"></div>
+        <p>{{activity.shape1_value}}</p>
       </div>
 
       <div class="Content2">
-        <div class="part2Shape"></div>
-        <p>90%</p>
+        <div class="part2Shape" [ngStyle]="{'width': activity.shape2_value}"></div>
+        <p>{{activity.shape2_value}}</p>
       </div>
 
       <div class="Content3">
-        <div class="part3Shape"></div>
-        <p>75%</p>
+        <div class="part3Shape" [ngStyle]="{'width': activity.shape3_value}"></div>
+        <p>{{activity.shape3_value}}</p>
       </div>
 
       <div class="Content4">
-        <div class="part4Shape"></div>
-        <p>68%</p>
-      </div>
-    </div>
-    </div>
-
-    <div class="activityPart1">
-
-      <div class="partsHeader">
-        <p>MTBF[h]</p>
-        <p>55%</p>
-      </div>
-
-      <div class="part1Contents">
-      <div class="Content1">
-        <div class="part1Shape"></div>
-        <p>60%</p>
-      </div>
-
-      <div class="Content2">
-        <div class="part2Shape"></div>
-        <p>90%</p>
-      </div>
-
-      <div class="Content3">
-        <div class="part3Shape"></div>
-        <p>75%</p>
-      </div>
-
-      <div class="Content4">
-        <div class="part4Shape"></div>
-        <p>68%</p>
-      </div>
-    </div>
-    </div>
-
-    <div class="activityPart1">
-
-      <div class="partsHeader">
-        <p>UPTIME</p>
-        <p>55%</p>
-      </div>
-
-      <div class="part1Contents">
-      <div class="Content1">
-        <div class="part1Shape"></div>
-        <p>60%</p>
-      </div>
-
-      <div class="Content2">
-        <div class="part2Shape"></div>
-        <p>90%</p>
-      </div>
-
-      <div class="Content3">
-        <div class="part3Shape"></div>
-        <p>75%</p>
-      </div>
-
-      <div class="Content4">
-        <div class="part4Shape"></div>
-        <p>68%</p>
+        <div class="part4Shape" [ngStyle]="{'width': activity.shape4_value}"></div>
+        <p>{{activity.shape4_value}}</p>
       </div>
     </div>
     </div>
