@@ -5,61 +5,111 @@
     <p>Loss Tree</p>
   </div>
 
-  <div class="treeBody">
+  <div class="treeBody" *ngFor="let tree of trees">
 
     <div class="line">
 
-      <div class="lineShape1"></div>
-      <div class="lineShape2"></div>
-      <p class="OFF">OFF</p>
-      <p class="ON">ON</p>
-      <p class="offValue">25%</p>
-      <p class="onValue">75%</p>
+    <div class="on_off_shape">
+
+      <div class="offShape" [ngStyle]="{ 'height': tree.off}">
+        <p class="off_value" >{{tree.off}}</p>
+        <p class="off">OFF</p>
+      </div>
+      <div class="onShape" [ngStyle]="{ 'height': tree.on}">
+        <p class="on_value" >{{tree.on}}</p>
+        <p class="on">ON</p>
+      </div>
+
+    </div>
 
     </div>
 
     <div class="line">
-      <div class="shape2"></div>
-      <pre class="shape2Name">Quality
-Loss</pre>
-        <p class="shape2VAlue">45%</p>
+
+      <div class="follow_on">
+
+      <div class="stayDown" [ngStyle]="{ 'height': tree.on}" >
+      <div class="shape2">
+        <div class="shape2Active" [ngStyle]="{ 'height': tree.quality}" >
+        <p class="shape2VAlue">{{tree.quality}}</p>
+        </div>
+      </div>
+      <p class="shape2Name">Quality <br> Loss</p>
+    </div>
+
+  </div>
+  </div>
+
+    <div class="line">
+      <div class="follow_on">
+        <div class="stayDown" [ngStyle]="{ 'height': tree.on}" >
+          <div class="shape3">
+            <div class="shape3Active" [ngStyle]="{ 'height': tree.Speed}" >
+            <p class="shape3VAlue">{{tree.Speed}}</p>
+            </div>
+          </div>
+          <p class="shape3Name">Speed <br> Loss</p>
+        </div>
+    </div>
+  </div>
+
+    <div class="line">
+        <div class="stayUp">
+          <p class="shape4Name">Break- <br> down</p>
+          <div class="shape4" [ngStyle]="{ 'height': tree.off}" >
+            <div class="shape4Active" [ngStyle]="{ 'height': tree.Break_down}" >
+            <p class="shape4VAlue">{{tree.Break_down}}</p>
+            </div>
+          </div>
+      </div>
     </div>
 
     <div class="line">
-      <div class="shape3"></div>
-      <pre class="shape3Name">Speed
-Loss</pre>
-        <p class="shape3VAlue">20%</p>
+      <div class="stayUp">
+        <p class="shape5Name">Cleansing <br> process</p>
+        <div class="shape5" [ngStyle]="{ 'height': tree.off}" >
+          <div class="shape5Active" [ngStyle]="{ 'height': tree.process}" >
+          <p class="shape5VAlue">{{tree.process}}</p>
+          </div>
+        </div>
+    </div>
     </div>
 
     <div class="line">
-      <p class="shape4Name">Break-down</p>
-      <div class="shape4"></div>
-        <p class="shape4VAlue">5%</p>
+      <div class="stayUp">
+        <p class="shape6Name">Change <br> over time</p>
+        <div class="shape6" [ngStyle]="{ 'height': tree.off}" >
+          <div class="shape6Active" [ngStyle]="{ 'height': tree.time}" >
+          <p class="shape6VAlue">{{tree.time}}</p>
+          </div>
+        </div>
+    </div>
+
     </div>
 
     <div class="line">
-      <p class="shape5Name">Cleansing process</p>
-      <div class="shape5"></div>
-        <p class="shape5VAlue">1%</p>
+
+      <div class="stayUp">
+        <p class="shape7Name">Idle</p>
+        <div class="shape7" [ngStyle]="{ 'height': tree.off}" >
+          <div class="shape7Active" [ngStyle]="{ 'height': tree.Idle}" >
+          <p class="shape7VAlue">{{tree.Idle}}</p>
+          </div>
+        </div>
+    </div>
+
     </div>
 
     <div class="line">
-      <p class="shape6Name">Change over time</p>
-      <div class="shape6"></div>
-        <p class="shape6VAlue">2%</p>
+      <div class="stayUp">
+        <p class="shape8Name">Minor <br> stops</p>
+        <div class="shape8" [ngStyle]="{ 'height': tree.off}" >
+          <div class="shape8Active" [ngStyle]="{ 'height': tree.stops}" >
+          <p class="shape8VAlue">{{tree.stops}}</p>
+          </div>
+        </div>
     </div>
 
-    <div class="line">
-      <p class="shape7Name">Idle</p>
-      <div class="shape7"></div>
-        <p class="shape7VAlue">2%</p>
-    </div>
-
-    <div class="line">
-      <p class="shape8Name">Minor stops</p>
-      <div class="shape8"></div>
-        <p class="shape8VAlue">5%</p>
     </div>
 
 

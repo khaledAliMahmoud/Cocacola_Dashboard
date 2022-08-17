@@ -26,6 +26,7 @@ import { PlanningBoxesComponent } from './components/planning-boxes/planning-box
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { PlanningTreeComponent } from './components/planning-tree/planning-tree.component';
 import { PlanningStepsComponent } from './components/planning/planning-steps/planning-steps.component';
+import { ReportsTimeLineComponent } from './components/reports-time-line/reports-time-line.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { PlanningStepsComponent } from './components/planning/planning-steps/pla
     FactoryComponent,
     PlanningBoxesComponent,
     PlanningTreeComponent,
-    PlanningStepsComponent
+    PlanningStepsComponent,
+    ReportsTimeLineComponent
   ],
   imports: [
     BrowserModule,

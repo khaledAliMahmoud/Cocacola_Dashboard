@@ -24,10 +24,9 @@
   <div class="operationLine"></div>
 
 <button [disabled]="machine_clicked"
-[ngClass]="{'Non_Function_activated': operationActivated == 'Resources' , 'Non_activated': operationActivated !== 'Resources'
-  }" (click)="[OperationBtn('Resources') , resourceBtn()]">
+[ngClass]="{'activated': operationActivated == 'Resources' , 'Non_activated': operationActivated !== 'Resources' ,
+'Non_Function_activated': unClicked_resource === true}" (click)="[OperationBtn('Resources') , resourceBtn()]">
     <img src="../../../assets/Imgs/planning2/Resources.svg" alt=""></button>
-
 
   </div>
 
