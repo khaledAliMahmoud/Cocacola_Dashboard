@@ -11,6 +11,8 @@ import { LoggedOutService } from 'src/app/logged-out.service';
 })
 export class LoginComponent implements OnInit {
 
+  disableLogin:boolean = true
+
   loginForm:FormGroup = new FormGroup({
     userMail:new FormControl(null , [Validators.required, Validators.email ]),
     password:new FormControl(null , [Validators.required])
