@@ -9,7 +9,6 @@ import { ReportsComponent } from './components/reports/reports.component';
 import { ProtectionGuard } from './protection.guard';
 
 const routes: Routes = [
-  { path: 'home', canActivate:[ProtectionGuard], component: HomeComponent },
   { path: 'dashboard', canActivate:[ProtectionGuard],  component: DashboardComponent },
   { path: 'machines', canActivate:[ProtectionGuard],  component: MachinesComponent },
   { path: 'reports', canActivate:[ProtectionGuard],  component: ReportsComponent },
